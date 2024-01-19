@@ -1,0 +1,13 @@
+{% extends 'aplicacion/base.html' %}
+
+
+{% block contenido %}
+<h1>Crea Profesor</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Guardar</button>
+        <button><a href="{% url 'index' %}">Cancelar</a></button>
+    </form>
+
+{% endblock contenido %}
