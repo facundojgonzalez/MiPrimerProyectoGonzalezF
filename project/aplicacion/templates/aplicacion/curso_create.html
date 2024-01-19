@@ -1,8 +1,8 @@
-{% extends 'core/base.html' %}
+{% extends 'aplicacion/base.html' %}
 
 
 {% block contenido %}
-<h1>Alta de Nuevo Curso</h1>
+<h1>Crear Curso</h1>
     <form method="post">
         {% csrf_token %}
         {{ form }}
