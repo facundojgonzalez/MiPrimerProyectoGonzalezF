@@ -1,24 +1,13 @@
 {% extends 'core/base.html' %}
 
-
 {% block contenido %}
-<h1>Mostrar Cursos</h1>
-<table style="margin-bottom:10px; width: 100%; border: 1px solid #000"  cellspacing="3" cellpadding="4">
-    <tr style="background-color: #ccc;">
-            <td>Curso</td>
-            <td>Comisión</td>
-            <td>Profesor</td>        
-        </tr>
     {% for curso in cursos %}
-        <tr>
-            
-            <td>{{ curso.nombre }}</td>
-            <td>{{ curso.comision }}</td>
-            <td>{{ curso.profesor }}</td>            
-        </tr>
+        <ul>
+            <li>
+                {{ curso.nombre }}
+                {{ curso.comision }}
+                {{ curso.profesor }}
+            </li>
+        </ul>
     {% endfor %}
-    </table>
-    <button><a href="{% url 'curso_create' %}">Crear Curso</a></button>
-    <button><a href="{% url 'curso_inscription_list' %}">Ver Estudiantes Inscriptos</a></button>
-    <button><a href="{% url 'index' %}">Página Principal</a></button>
 {% endblock contenido %}

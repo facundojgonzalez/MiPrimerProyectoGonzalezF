@@ -1,13 +1,11 @@
 {% extends 'core/base.html' %}
 
-
 {% block contenido %}
-<h1>Crear Curso</h1>
+
     <form method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <button type="submit">Guardar</button>
-        <button><a href="{% url 'index' %}">Cancelar</a></button>
     </form>
 
 {% endblock contenido %}

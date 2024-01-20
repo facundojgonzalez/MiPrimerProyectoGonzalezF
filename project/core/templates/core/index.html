@@ -2,17 +2,18 @@
 
 {% block contenido %}
 
-    <h1>Profesores</h1>
-    <a href="{% url 'profesor_list' %}">Ver Profesores</a>
-    <a href="{% url 'profesor_create' %}">Crear Profesores</a>
+    <h1> MI PRIMER PROYECTO </h1>
 
-    <h1>Estudiante</h1>
-    <a href="{% url 'estudiante_list' %}">Ver Estudiante</a>
-    <a href="{% url 'estudiante_create' %}">Crear Estudiante</a>
-    
+    <h1> Crear y ver Profesores </h1>
+    <button><a href="{% url 'profesor_create'%}">Crear Profesores</a></button>
+    <button><a href="{% url 'profesor_list'%}">Ver Profesores</a></button>
 
-    <h1>Cursos</h1>
-    <a href="{% url 'curso_list' %}">Ver Cursos</a>
-    <a href="{% url 'curso_create' %}">Crear Curso</a>
-    
+    <h1> Crear y ver Estudiantes </h1>
+    <button><a href="{% url 'alumno_create'%}">Crear Alumno</a></button>
+    <button><a href="{% url 'alumno_list'%}">Ver Alumno</a></button>
+
+    <h1> Crear y ver Curso </h1>
+    <button><a href="{% url 'curso_create'%}">Crear Cursos</a></button>
+    <button><a href="{% url 'curso_list'%}">Ver Cursos</a></button>
+
 {% endblock contenido %}

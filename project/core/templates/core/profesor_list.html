@@ -1,21 +1,13 @@
+{% extends 'core/base.html' %}
+
 {% block contenido %}
-<h1>Ver Profesores</h1>
-<table style="margin-bottom:10px; width: 100%; border: 1px solid #000"  cellspacing="3" cellpadding="4">
-    <tr style="background-color: #ccc;">
-        <td>Nombre</td>
-        <td>Apellido</td>
-        <td>Email</td>
-    </tr>
     {% for profesor in profesores %}
-        <tr>
-            
-            <td>{{ profesor.nombre }}</td>
-            <td>{{ profesor.apellido }}</td>
-            <td>{{ profesor.email }}</td>
-            <td><a href="#">Modificar</a><br><a href="#">Eliminar</a></td>
-        </tr>
+        <ul>
+            <li>
+                {{ profesor.nombre }}
+                {{ profesor.apellido }}
+                {{ profesor.email }}
+            </li>
+        </ul>
     {% endfor %}
-</table>
-    <button><a href="{% url 'profesor_create' %}">Crear Profesores</a></button>
-    <button><a href="{% url 'index' %}">Página Principal</a></button>
 {% endblock contenido %}

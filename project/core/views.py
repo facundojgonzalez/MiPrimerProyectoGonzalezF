@@ -24,21 +24,21 @@ def profesor_create(request):
         form = forms.ProfesorForm()
     return render(request, "core/profesor_create.html", {"form": form})
 
-def estudiante_list(request):
-    consulta = models.Estudiante.objects.all()
-    contexto = {"estudiantes": consulta}
-    return render(request, "core/estudiante_list.html", contexto)
+def alumnno_list(request):
+    consulta = models.Alumno.objects.all()
+    contexto = {"alumno": consulta}
+    return render(request, "core/alumno_list.html", contexto)
 
 
-def estudiante_create(request):
+def alumno_create(request):
     if request.method == "POST":
-        form = forms.EstudianteForm(request.POST)
+        form = forms.AlumnoForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("estudiante_list")
+            return redirect("alumno_list")
     else:
-        form = forms.EstudianteForm()
-    return render(request, "core/estudiante_create.html", {"form": form})
+        form = forms.AlumnoForm()
+    return render(request, "core/alumno_create.html", {"form": form})
 
 def curso_list(request):
     consulta = models.Curso.objects.all()
